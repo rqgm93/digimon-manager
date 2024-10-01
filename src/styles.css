@@ -1,1 +1,161 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estructura y estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    text-align: center;
+  }
+  
+  /* Estilos para los encabezados */
+  h2 {
+    color: #0044cc;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el formulario de Añadir Digimon */
+  input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0056b3;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #003d99;
+  }
+  
+  /* Estilos para la lista de Digimons */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .digimon-section li {
+    background-color: #e0f0ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li button {
+    background-color: #ff3333;
+  }
+  
+  li button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Mensaje de lista vacía */
+  p {
+    font-size: 18px;
+    color: #cc0000;
+  }
+  
+  /* Estilo del encabezado */
+  .main-header {
+    background-color: #ffcc00;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    color: white; /* Color del texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    padding-bottom: 10px;
+  }
+  
+  .main-header h1 {
+    font-size: 3rem;
+    color: #003366;
+    text-shadow: 2px 2px #ff0000;
+    font-family: 'Verdana', sans-serif;
+    letter-spacing: 3px;
+  }
+  
+  /* Navegación principal */
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .main-nav ul li {
+    margin: 0 15px;
+  }
+  
+  .main-nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .main-nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+    text-shadow: 2px 2px #000;
+  }
+  
+  /* Estilo de la sección principal */
+  .main-content {
+    height: 600px;
+    width: 50%;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
+  .digimon-section h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  
+  .main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:#003366; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+  }
+  
+  .main-footer p {
+    font-size: 1rem;
+    color: white;
+  }
