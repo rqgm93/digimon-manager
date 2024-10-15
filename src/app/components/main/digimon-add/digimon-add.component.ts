@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DigimonService } from '../digimon.service';
+import { DigimonService } from '../../../services/digimon.service';
 
 @Component({
   selector: 'app-digimon-add',
@@ -11,7 +11,7 @@ import { DigimonService } from '../digimon.service';
 export class DigimonAddComponent {
   constructor(private digimonService: DigimonService){}
 
-  addDigimons(name: string, type: string){
-    this.digimonService.addDigimon({name, type});
+  addDigimons(name: string, type: string, desc: string, attack: string){
+    this.digimonService.addDigimon(name, type, desc, attack);
   }
 }

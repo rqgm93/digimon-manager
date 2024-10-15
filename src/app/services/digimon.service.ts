@@ -20,17 +20,27 @@ export class DigimonService {
   }
 
   digimons = [
-    {name: 'Agumon', type: 'Reptil'},
-    {name: 'Gabumon', type: 'Reptil'},
-    {name: 'Patamon', type: 'Mamífero'}
+    {id: 1, name: 'Agumon', type: 'Reptil', desc: '', attack: {}},
+    {id: 2, name: 'Gabumon', type: 'Reptil', desc: '', attack: {}},
+    {id: 3, name: 'Patamon', type: 'Mamífero', desc: '', attack: {}}
   ];
+
+  getItemById(id: number): any {
+    return this.digimons.find(digimons => digimons.id === id);
+  }
 
   getDigimons(){
     return this.digimons;
   }
 
-  addDigimon(digimon :{name: string, type: string})
+  addDigimon(name: string, type: string, desc: string, attack: {})
   {
+    const newId = this.digimons.length > 0 
+    ? Math.max(...this.digimons.map(digimon => digimon.id)) + 1 
+    : 1;
+
+    const digimon = {id: newId, name, type, desc, attack};
+
     this.digimons.push(digimon);
     // Guarda el vector actualizado en localStorage
     this.saveToLocalStorage();   

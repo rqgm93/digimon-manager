@@ -1,0 +1,46 @@
+.digimon-detail-card {
+    background-color: #f0f8ff;
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .digimon-detail-card h3 {
+    color: #003366;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .digimon-detail-card p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .digimon-detail-card button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+  }
+  
+  .digimon-detail-card button:hover {
+    background-color: #003d99;
+  }
+
+  .digimon-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+  }

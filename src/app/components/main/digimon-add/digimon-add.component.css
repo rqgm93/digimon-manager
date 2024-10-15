@@ -1,0 +1,19 @@
+  /* Estilos para el formulario de Añadir Digimon */
+  input[type="text"] {
+   margin: 0 auto;  
+    margin-bottom: 30px;  
+    display: block;
+   
+  }
+
+  textarea{
+  margin: 0 auto;  
+    margin-bottom: 30px;
+    
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  

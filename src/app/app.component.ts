@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { DigimonListComponent } from './digimon-list/digimon-list.component';
-import { DigimonAddComponent } from './digimon-add/digimon-add.component';
+import { Component} from '@angular/core';
+import { MainComponent } from './components/main/main.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DigimonListComponent, DigimonAddComponent, RouterLink], // Importa RouterLink
+  imports: [
+    HeaderComponent,
+    MainComponent
+  ], // Importa RouterLink
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

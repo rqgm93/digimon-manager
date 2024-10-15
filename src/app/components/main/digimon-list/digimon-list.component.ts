@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { DigimonService } from '../digimon.service';
+
+import { Router } from '@angular/router';
+import { DigimonService } from '../../../services/digimon.service';
 
 @Component({
   selector: 'app-digimon-list',
@@ -14,16 +16,23 @@ export class DigimonListComponent implements OnInit
 
   tiposDigimon: string[] = ['Reptil', 'Mamífero', 'Ave'];
 
-  digimons: {name: string, type: string} []= [];
+  digimons: {id: number, name: string, type: string} []= [];
 
-  constructor(private digimonService: DigimonService){}
+  editingIndex: number | null = null;
+  dialog: any;
+
+  constructor(private digimonService: DigimonService, private router: Router){}
 
   ngOnInit(): void {
     this.digimons = this.digimonService.getDigimons();
   }
 
-  deleteDigimons(index: number){
-    this.digimonService.deleteDigimon(index);
+  deleteDigimons(id: number){
+    this.digimonService.deleteDigimon(id);
+  }
+
+  viewDigimon(id: number){
+    this.router.navigate(['/digimon', id]);
   }
 
 }
